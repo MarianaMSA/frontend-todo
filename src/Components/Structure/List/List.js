@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
-import Api from "../../../API/api";
+import Api from "../../../api/api";
 
 const List = () => {
     const [tarefas, setTarefas] = useState([]);

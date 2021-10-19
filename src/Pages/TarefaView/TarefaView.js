@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import Api from '../../API/api';
+import Api from '../../api/api';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 
@@ -14,10 +14,10 @@ const TarefaView = (props) => {
     const onCloseModal = () => setOpen(false);
 
     useEffect(() => {
-        getToDoById();
+        getTarefaById();
     }, []);
 
-    const getToDoById = async () => {
+    const getTarefaById = async () => {
         const response = await Api.fetchGetById(_id);
         const result = await response.json();
         setTarefa(result);
